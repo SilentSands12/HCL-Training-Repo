@@ -37,11 +37,11 @@ class Calculations{
 	// Additional methods
 	void exponent(double a, double b) {
 		double result = Math.pow(a, b);
-		System.out.printf("%1f^%1f = %1f\n", a,b,result);
+		System.out.printf("%.0f^%.0f = %.0f\n", a,b,result);
 	}
 	void squareRoot(double a) {
 		double result = Math.sqrt(a);
-		System.out.printf("sqrt of %1f = %1f\n",a,result);
+		System.out.printf("sqrt of %.0f = %.0f\n",a,result);
 	}
 	
 }
