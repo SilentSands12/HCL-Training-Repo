@@ -6,34 +6,24 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// starting time
-        long start = System.currentTimeMillis();
 		new MainCode2().getInput();
-		// ending time
-        long end = System.currentTimeMillis();
-        System.out.println("Speed of method was " +
-                                    (end - start) + "ms\n");
-        
-        // Testing method #2
-        long start2 = System.currentTimeMillis();
+
+		// Testing method #2
 		new MainCode2().getInput2();
-		// ending time
-        long end2 = System.currentTimeMillis();
-        System.out.println("Speed of method was " +
-                                    (end2 - start2) + "ms\n");
-        
+
 	}
 
 }
 
-class MainCode2 { 
-	void getInput() { 
+class MainCode2 {
+	void getInput() {
 		// Initialize variables and get input from user
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Please enter a string: ");
 		String input = scan.nextLine();
 		mainCodeWork(input);
 	}
+
 	void getInput2() {
 		// Initialize variables and get input from user
 		Scanner scan = new Scanner(System.in);
@@ -44,7 +34,7 @@ class MainCode2 {
 	}
 
 	void mainCodeWork(String input) {
-        
+
 		// Initialize variables
 		int middle;
 		char[] array = input.toCharArray();
@@ -59,12 +49,12 @@ class MainCode2 {
 				if (String.valueOf(array[i]).equals(String.valueOf(array[j]))) {
 					j++;
 				} else {
-					System.out.printf("%s is not a palindrome.\n", input);
+					System.out.printf("%s is not a palindrome.\n\n", input);
 					break;
 				}
 				if (i == 0) {
 					// Confirms palindrome
-					System.out.printf("%s is a palindrome.\n", input);
+					System.out.printf("%s is a palindrome.\n\n", input);
 				}
 			}
 		} else { // Odd side else statement
@@ -76,28 +66,31 @@ class MainCode2 {
 					if (String.valueOf(array[i]).equals(String.valueOf(array[j]))) {
 						j++;
 					} else {
-						System.out.printf("%s is not a palindrome.\n", input);
+						System.out.printf("%s is not a palindrome.\n\n", input);
 						break;
 					}
 					if (i == 0) {
 						// Confirms palindrome
-						System.out.printf("%s is a palindrome.\n", input);
+						System.out.printf("%s is a palindrome.\n\n", input);
 					}
 				}
+			} else if (input.length() == 1) {
+				System.out.printf("%s is a palindrome.\n\n", input);
 			} else {
-				System.out.println("Sorry...just one character or no characters in the string.");
+				System.out.println("Sorry...no characters in the string.");
 			}
 		}
 
 	}
+
 	void mainCodeWork2(String input) {
-        
+
 		StringBuilder sb = new StringBuilder(input);
-		if (input.equals(sb.reverse().toString())){
+		if (input.equals(sb.reverse().toString())) {
 			// Confirms palindrome
-			System.out.printf("%s is a palindrome.\n", input);
+			System.out.printf("%s is a palindrome.\n\n", input);
 		} else {
-			System.out.printf("%s is not a palindrome.\n", input);
+			System.out.printf("%s is not a palindrome.\n\n", input);
 		}
 
 	}

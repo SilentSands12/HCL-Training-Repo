@@ -45,11 +45,11 @@ class MainCode {
 					repeatAmount = 0;
 				}
 				count++;
-				// End of second loop if statement
-			}
+			} // End of inner loop
 			count = 0;
-		} // End of second loop
+		} // End of first loop
 
+		// Final loop to get index
 		int index = 0, counter = 0;
 		for (char k : array) {
 			if (String.valueOf(temp).equals(String.valueOf(k))) {
