@@ -22,6 +22,5 @@ public class Maps {
 	}
 	
 	static void countMappings(Map<String, String> map) {
-		map.
 	}
 }
