@@ -11,7 +11,8 @@ public class Sets {
 		compareSets(makeSet());
 		lessThanSeven();
 	}
-	static Set<String> makeSet(){
+
+	static Set<String> makeSet() {
 		Set<String> set = new HashSet<String>();
 		set.add("John");
 		set.add("Tim");
@@ -19,6 +20,7 @@ public class Sets {
 		set.add("Lynette");
 		return set;
 	}
+
 	static void compareSets(Set<String> set) {
 		Set<String> set2 = new HashSet<String>();
 		set2.add("Glaly");
@@ -26,10 +28,11 @@ public class Sets {
 		set2.add("Tim");
 		set2.add("Lynette");
 		Set<String> set1 = set;
-		
+
 		set1.retainAll(set2);
 		System.out.println("The retainable elements in both the sets were: " + set1);
 	}
+
 	static void lessThanSeven() {
 		TreeSet<Integer> tree = new TreeSet<Integer>();
 		TreeSet<Integer> less = new TreeSet<Integer>();
@@ -46,9 +49,9 @@ public class Sets {
 //				less.add(tree.lower(i));
 //			}
 //		}
-		
+
 		// Better solution that just used the headSet method call
-		less = (TreeSet<Integer>)tree.headSet(7);
+		less = (TreeSet<Integer>) tree.headSet(7);
 		System.out.println("The elements less than 7 in the treeset are: " + less);
 	}
 }

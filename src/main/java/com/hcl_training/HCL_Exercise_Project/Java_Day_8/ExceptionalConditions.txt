@@ -1,0 +1,43 @@
+List of Common Checked Exceptions experienced so far:
+Common checked exceptions defined in the java.io package:
+	-IOException: Signals that an I/O exception of some sort has occurred. This class is the general class of exceptions
+		 produced by failed or interrupted I/O operations.
+		 
+		> EOFException: Signals that an end of file or end of stream has been reached unexpectedly during input.
+		> FileNotFoundException: Signals that an attempt to open the file denoted by a specified pathname has failed.
+	
+Common unchecked exceptions in the java.lang package:
+	Runtime Exceptions
+	-ArithmeticException : thrown when an exceptional arithmetic condition
+		has occurred. Ex.g Divide by zero
+	-IndexOutOfBoundsException: Thrown to indicate that an index of some sort (such as to an 
+		array, to a string, or to a vector) is out of range.
+		
+		> ArrayIndexOutOfBoundsException: Thrown to indicate that an array has been accessed with an illegal index. 
+			The index is either negative or greater than or equal to the size of the array.
+		> StringIndexOutOfBoundsException: Thrown by String methods to indicate that an index is either negative or 
+			greater than the size of the string. For some methods such as the charAt method, this exception also is
+			thrown when the index is equal to the size of the string.
+	-IllegalArgumentException
+	
+		>NumberFormatException: thrown when an application has attempted to convert a string to one of the numeric types, 
+			but that string does not have the appropriate format. Ex. g Integer.parseInt("hello") 
+	-NullPointerException: Thrown when an application attempts to use null in a case where an object is required. 
+		These include:
+			> Calling the instance method of a null object.
+			> Accessing or modifying the field of a null object.
+			> Taking the length of null as if it were an array.
+			> Accessing or modifying the slots of null as if it were an array.
+			> Throwing null as if it were a Throwable value.
+	
+Common unchecked exceptions in the java.util package:
+	-NoSuchElementException
+	
+		>InputMismatchException:Thrown by a Scanner to indicate that the token retrieved does not match the pattern for 
+			the expected type, or that the token is out of range for the expected type.
+
+Questions #2 
+	Can exception handling be used with constructors and with problems with constructors? Please explain.
+	- Yes, just like methods you can throw exceptions from constructors in. But, if you do so, you need to
+	  catch/throw (handle) the exception at the method where you invoke the constructor. If you don’t a compile 
+	  time error is generated.
