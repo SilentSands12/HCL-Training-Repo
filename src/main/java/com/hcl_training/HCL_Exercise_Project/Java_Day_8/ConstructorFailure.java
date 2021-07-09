@@ -2,10 +2,10 @@ package com.hcl_training.HCL_Exercise_Project.Java_Day_8;
 
 import java.io.File;
 
-public class ConstructureFailure {
+public class ConstructorFailure {
 	File file;
 
-	ConstructureFailure(File file) {
+	ConstructorFailure(File file) {
 		try {
 			if (file == null) {
 				throw new CustomException("There was an exception in the first constructor.");
@@ -20,7 +20,7 @@ public class ConstructureFailure {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new ConstructureFailure(null);
+		new ConstructorFailure(null);
 	}
 }
 
