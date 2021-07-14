@@ -8,8 +8,9 @@ public class Sets {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		compareSets(makeSet());
-		lessThanSeven();
+		Sets set = new Sets();
+		set.compareSets(makeSet());
+		set.lessThanSeven();
 	}
 
 	static Set<String> makeSet() {
@@ -21,7 +22,7 @@ public class Sets {
 		return set;
 	}
 
-	static void compareSets(Set<String> set) {
+	void compareSets(Set<String> set) {
 		Set<String> set2 = new HashSet<String>();
 		set2.add("Glaly");
 		set2.add("Mario");
@@ -33,12 +34,12 @@ public class Sets {
 		System.out.println("The retainable elements in both the sets were: " + set1);
 	}
 
-	static void lessThanSeven() {
+	void lessThanSeven() {
 		TreeSet<Integer> tree = new TreeSet<Integer>();
 		TreeSet<Integer> less = new TreeSet<Integer>();
 		tree.add(3);
 		tree.add(0);
-		tree.add(87);
+		tree.add(7);
 		tree.add(6);
 		tree.add(2);
 		tree.add(87);

@@ -7,7 +7,9 @@ public class Maps {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Maps map = new Maps();
+		map.countMappings(makeMapping());
+		map.getMappings(makeMapping());
 	}
 	static Map<String, String> makeMapping() {
 		Map<String, String> map = new LinkedHashMap<String, String>();
@@ -19,8 +21,11 @@ public class Maps {
 		
 		return map;
 
+	}	
+	void countMappings(Map<String, String> map) {
+		System.out.printf("There are '%d' key values in the map.\n",map.size());
 	}
-	
-	static void countMappings(Map<String, String> map) {
+	void getMappings(Map<String, String> map) {
+		System.out.print("The values inside the map are: " + map.keySet());
 	}
 }
